@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class SpinningThing
+{
+    public static void main (String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Please enter five different colors that will be on your spinner.");
+        String first = scan.nextLine();
+        String sec = scan.nextLine();
+        String third = scan.nextLine();
+        String fourth = scan.nextLine();
+        String fifth = scan.nextLine();
+        
+        Spinner thing = new Spinner(first, sec, third, fourth, fifth);
+        for(int z = 1; z <= 10; z++)
+        {
+            System.out.println(thing);
+            thing.spin();
+        }
+    }
+}
