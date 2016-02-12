@@ -1,0 +1,41 @@
+import java.util.Random;
+public class Spinner
+{
+  Random rand = new Random();
+  private int x;
+  private String y;
+  String ichi, ni, san, shi, go;
+ 
+  public Spinner(String col1, String col2, String col3, String col4, String col5) {
+      ichi = col1;
+      ni = col2;
+      san = col3;
+      shi = col4;
+      go = col5;
+      spin();
+  }
+ 
+  public int spin() {
+      x = (rand.nextInt(5));
+      return x;
+  }
+      
+  public String toString() {
+      if(x == 0) {
+          y = ichi;
+      }
+      else if(x == 1) {
+          y = ni;
+      }
+      else if(x == 2) {
+          y = san;
+     }
+      else if(x == 3) {
+          y = shi;
+     }
+      else {
+         y = go;
+     }
+      return "The color is " + y;
+  }
+}
